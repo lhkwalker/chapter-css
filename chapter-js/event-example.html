@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#status, #log {
+	width: 200px;
+	height: 100px;
+	border: 1px solid black;
+}
+</style>
+<body>
+    <div id="status"></div>
+    <div id="log"></div>
+</body>
+<script>
+    window.addEventListener('load', function() {
+      var status = document.getElementById("status");
+      var log = document.getElementById("log");
+    
+      function updateOnlineStatus(event) {
+        var condition = navigator.onLine ? "online" : "offline";
+        status.innerHTML = condition.toUpperCase();
+    
+        log.insertAdjacentHTML("beforeend", "Event: " + event.type + "; Status: " + condition);
+      }
+    
+      window.addEventListener('online',  updateOnlineStatus);
+      window.addEventListener('offline', updateOnlineStatus);
+    });
+</script>
+</html>
