@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Scale Example</title>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: transform 0.3s ease-in-out;
+  }
+  .box:hover {
+    transform: scale(120%); /* 放大到120% */
+  }
+  
+  
+  @keyframes example {
+    20% {
+      background-color: green;
+	  /* transform: scale(0.9); */
+	  /* transform: translateX(50px); */
+	  transform: rotate(45deg);
+	  /* transform: skew(30deg, -20deg); */
+    }
+    50% {
+      background-color: green;
+	  /* transform: scale(1.1); */
+	  /* transform: translateX(-50px); */
+	  transform: rotate(-45deg);
+	  /* transform: skew(-30deg, 20deg); */
+    }
+  }
+  .animated-element {
+    width: 100px;
+    height: 100px;
+      background-color: red;
+  }
+  .animated-element:hover {
+    animation-name: example;
+    animation-duration: 1s; /* 动画持续时间 */
+  }
+</style>
+</head>
+<body>
+ 
+<div class="box"></div>
+<div class="animated-element"></div>
+ 
+</body>
+</html>
