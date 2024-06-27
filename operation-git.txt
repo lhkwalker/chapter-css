@@ -1,6 +1,18 @@
 git init
-git add *
-git commit -m "first commit"
+git add 文件名
+git commit -m "注释"
 git branch -M main
 git remote add origin https://github.com/lhkwalker/remote-code.git
 git push -u origin main
+
+# 查看git状态
+git status
+
+# 查看配置
+git config --list
+
+# 修改本地配置
+git config remote.origin.url https://github.com/lhkwalker/remote-code.git
+
+# 修改全局配置
+git config --global remote.origin.url https://github.com/lhkwalker/remote-code.git
